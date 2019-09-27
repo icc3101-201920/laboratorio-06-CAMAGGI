@@ -22,6 +22,14 @@ namespace Laboratorio_5_OOP_201902
         {
             decks = new List<Deck>();
             captains = new List<SpecialCard>();
+            this.players = new Player[] { new Player(), new Player() };
+            this.boardGame = new Board();
+            Random rdm = new Random();
+            this.activePlayer = players[rdm.Next(0, 2)];
+            players[1].Board = this.boardGame;
+            players[0].Board = this.boardGame;
+            AddDecks();
+            AddCaptains();
         }
         //Propiedades
         public Player[] Players
