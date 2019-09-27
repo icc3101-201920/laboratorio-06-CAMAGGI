@@ -18,18 +18,19 @@ namespace Laboratorio_5_OOP_201902
             player.Deck.Shuffle();
             player.FirstHand();
             player.ChooseCaptainCard(game.Captains[0]);
-            Console.WriteLine($"Player captain card: {player.Captain.Name}\n");
+            //Console.WriteLine($"Player captain card: {player.Captain.Name}\n");
             int counter = 1;
-            Console.WriteLine("Player Hand:");
+           // Console.WriteLine("Player Hand:");
             foreach (Card card in player.Hand.Cards)
             {
-                Console.WriteLine($"{counter++}: {card.Name}");
+             //   Console.WriteLine($"{counter++}: {card.Name}");
             }
             counter = 1;
-            Console.WriteLine("\nPlayer Deck:");
+            //Console.WriteLine("\nPlayer Deck:");
+            Visualization.ShowDecks(game.Decks);
             foreach (Card card in player.Deck.Cards)
             {
-                Console.WriteLine($"{counter++}: {card.Name}");
+            //    Console.WriteLine($"{counter++}: {card.Name}");
             }
             
             //Test Change Card
