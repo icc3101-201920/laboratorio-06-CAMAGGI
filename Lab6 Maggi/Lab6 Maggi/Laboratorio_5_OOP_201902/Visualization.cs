@@ -64,7 +64,40 @@ namespace Laboratorio_5_OOP_201902
 
         static void GetUserInput(int maxInput, bool stopper = false)
         {
+            int iii;
+            while (true)
+            {
+                string user = Console.ReadLine();
+               
+                try
+                {
+                    iii = Convert.ToInt32(user);
+                }
+                catch
+                {
+                    ConsoleError($"{user} is not valid input.");
+                    continue;
+                }
+                
+                if (stopper)
+                {
+                    if (iii < -1 || iii > maxInput)
+                    {
+                        ConsoleError($"{iii} is not valid input.");
+                        continue;
+                    }
+                    break;
+                }
 
+                if (iii < 0 || iii > maxInput)
+                {
+                    ConsoleError($"{iii} is not valid input ");
+                    continue;
+                }
+                break;
+              
+            }
+            
         }
 
         public static void ConsoleError(string message)
@@ -84,7 +117,10 @@ namespace Laboratorio_5_OOP_201902
         {
 
         }
-
+        public static void ClearConsole()
+        {
+            Console.Clear();
+        }
 
 
 
