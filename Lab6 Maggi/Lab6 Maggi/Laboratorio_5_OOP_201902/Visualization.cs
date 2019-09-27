@@ -115,6 +115,17 @@ namespace Laboratorio_5_OOP_201902
         }
         static void ShowListOptions(List<string> options, string message = null)
         {
+            if (message != null)
+            {
+                Console.WriteLine(message);
+            }
+            int c = 0;
+            foreach (string op in options)
+            {
+                Console.WriteLine($"[{c}] {op}");
+                c++;
+            }
+
 
         }
         public static void ClearConsole()
